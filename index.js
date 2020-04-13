@@ -2,7 +2,7 @@
 
 var MongoClient = require('mongodb').MongoClient;
 
-module.exports = function (uri, opts) {
+module.exports = (uri, opts) => {
 	if (typeof uri !== 'string') {
 		throw new TypeError('Expected uri to be a string');
 	}
