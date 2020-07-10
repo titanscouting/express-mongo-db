@@ -1,13 +1,13 @@
 {
-  "name": "express-mongo-db",
-  "version": "2.0.4",
+  "name": "mongo-express-req",
+  "version": "3.0.0",
   "description": "Get db connection in request",
   "license": "MIT",
-  "repository": "floatdrop/express-mongo-db",
+  "repository": "devksingh4/express-mongo-db",
   "author": {
-    "name": "Vsevolod Strukchinsky",
-    "email": "floatdrop@gmail.com",
-    "url": "github.com/floatdrop"
+    "name": "Dev Singh",
+    "email": "dev@devksingh.com",
+    "url": "github.com/devksingh4"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -24,7 +24,7 @@
     "express"
   ],
   "dependencies": {
-    "mongodb": "^3.5.5"
+    "mongodb": "^3.5.9"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
