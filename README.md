@@ -49,4 +49,4 @@ Property on `request` object in which db connection will be stored.
 
 ## License
 
-MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop)
+MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop) and [Dev Singh](http://github.com/devksingh4)
