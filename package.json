@@ -1,6 +1,6 @@
 {
   "name": "mongo-express-req",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Get db connection in request",
   "license": "MIT",
   "repository": "devksingh4/mongo-express-req",
