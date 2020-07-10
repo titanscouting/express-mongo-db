@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Get db connection in request",
   "license": "MIT",
-  "repository": "devksingh4/express-mongo-db",
+  "repository": "devksingh4/mongo-express-req",
   "author": {
     "name": "Dev Singh",
     "email": "dev@devksingh.com",

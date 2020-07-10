@@ -1,4 +1,4 @@
-# express-mongo-db [![Build Status](https://travis-ci.org/floatdrop/express-mongo-db.svg?branch=master)](https://travis-ci.org/floatdrop/express-mongo-db)
+# mongo-express-req [![Build Status](https://travis-ci.org/floatdrop/mongo-express-req.svg?branch=master)](https://travis-ci.org/floatdrop/mongo-express-req)
 
 > Get db connection in request
 
@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save express-mongo-db
+$ npm install --save mongo-express-req
 ```
 
 
@@ -15,7 +15,7 @@ $ npm install --save express-mongo-db
 ```js
 var app = require('express')();
 
-var expressMongoDb = require('express-mongo-db');
+var expressMongoDb = require('mongo-express-req');
 app.use(expressMongoDb('mongodb://localhost/test'));
 
 app.get('/', function (req, res, next) {
