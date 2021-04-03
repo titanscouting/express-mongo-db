@@ -1,13 +1,13 @@
 {
   "name": "mongo-express-req",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Get db connection in request",
   "license": "MIT",
-  "repository": "devksingh4/mongo-express-req",
+  "repository": "titanscouting/mongo-express-req",
   "author": {
     "name": "Dev Singh",
-    "email": "dev@devksingh.com",
-    "url": "https://github.com/devksingh4"
+    "email": "dsingh@imsa.edu",
+    "url": "https://devksingh.com"
   },
   "engines": {
     "node": ">=0.10.0"
