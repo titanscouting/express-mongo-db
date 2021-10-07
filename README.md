@@ -1,4 +1,4 @@
-# mongo-express-req [![Build Status](https://travis-ci.org/floatdrop/mongo-express-req.svg?branch=master)](https://travis-ci.org/floatdrop/mongo-express-req)
+# mongodb-express-req [![Build Status](https://travis-ci.org/floatdrop/mongodb-express-req.svg?branch=master)](https://travis-ci.org/floatdrop/mongodb-express-req)
 
 > Get db connection in request
 
@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save mongo-express-req
+$ npm install --save mongodb-express-req
 ```
 
 
@@ -15,11 +15,12 @@ $ npm install --save mongo-express-req
 ```js
 var app = require('express')();
 
-var expressMongoDb = require('mongo-express-req');
-app.use(expressMongoDb('mongodb://localhost/test'));
+var expressMongoDb = require('mongodb-express-req');
+app.use(expressMongoDb('mongodb://localhost/db_name'));
 
 app.get('/', function (req, res, next) {
-	req.db // => Db object
+	// req.db => Db object
+  req.db.collection('collection_name').insertOne({ email, password })
 });
 ```
 
@@ -49,4 +50,4 @@ Property on `request` object in which db connection will be stored.
 
 ## License
 
-MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop) and [Dev Singh](http://github.com/devksingh4)
+MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop), [Dev Singh](http://github.com/devksingh4), [Roman Shmigelsky](http://github.com/roman-sh)
