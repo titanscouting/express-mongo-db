@@ -7,7 +7,7 @@ module.exports = (uri, opts) => {
 		throw new TypeError('Expected uri to be a string');
 	}
 
-  var dbName = /(?<=\/)\w*(?=(\?|$))/.exec(uri).toString()
+  var dbName = /(?<=\/)\w*(?=\?)/.exec(uri)?.toString() || /(?<=\/)\w*(?=$)/.exec(uri)?.toString()
   if (!dbName) {
 		throw new Error('Database name not found in connection string');
 	}
