@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save mongodb-express-req
+$ npm install mongodb-express-req
 ```
 
 
@@ -19,7 +19,7 @@ var expressMongoDb = require('mongodb-express-req');
 app.use(expressMongoDb('mongodb://localhost/db_name'));
 
 app.get('/', function (req, res, next) {
-	// req.db => Db object
+	req.db // =>Db object
   req.db.collection('collection_name').insertOne({ email, password })
 });
 ```
