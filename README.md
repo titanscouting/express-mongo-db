@@ -1,5 +1,3 @@
-# mongodb-express-req [![Build Status](https://travis-ci.org/floatdrop/mongodb-express-req.svg?branch=master)](https://travis-ci.org/floatdrop/mongodb-express-req)
-
 > Get db connection in request
 
 
