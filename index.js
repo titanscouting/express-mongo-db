@@ -1,31 +1,35 @@
-'use strict';
+import whatwgUrl from 'whatwg-url'
+import { MongoClient } from 'mongodb'
 
-var MongoClient = require('mongodb').MongoClient;
 
-module.exports = (uri, opts) => {
+module.exports = (uri, opts = {}) => {
 	if (typeof uri !== 'string') {
-		throw new TypeError('Expected uri to be a string');
+		throw new TypeError('Expected uri to be a string')
 	}
 
-	opts = opts || {};
-	var property = opts.property || 'db';
-	delete opts.property;
+  const dbName = whatwgUrl.basicURLParse(uri).path.toString()
+  if (!dbName) {
+		throw new Error('Database name not found in connection string')
+	}
 
-	var connection;
+	const property = opts.property || 'db'
+	delete opts.property
 
-	return function expressMongoDb(req, res, next) {
+	let connection
+
+	return async function expressMongoDb(req, res, next) {
+    console.log(`mongodb_connection: ${!!connection}`)
 		if (!connection) {
-			connection = MongoClient.connect(uri, opts);
+      try {
+        const res = await MongoClient.connect(uri, opts)
+        connection = true
+        req[property] = res.db(dbName)
+				next()
+      }
+      catch (e) {
+        connection = false
+				next(e)
+      }
 		}
-
-		connection
-			.then(function (db) {
-				req[property] = db;
-				next();
-			})
-			.catch(function (err) {
-				connection = undefined;
-				next(err);
-			});
-	};
-};
+	}
+}

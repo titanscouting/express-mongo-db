@@ -1,12 +1,10 @@
-# mongo-express-req [![Build Status](https://travis-ci.org/floatdrop/mongo-express-req.svg?branch=master)](https://travis-ci.org/floatdrop/mongo-express-req)
-
 > Get db connection in request
 
 
 ## Install
 
 ```
-$ npm install --save mongo-express-req
+$ npm install mongodb-express-req
 ```
 
 
@@ -15,11 +13,12 @@ $ npm install --save mongo-express-req
 ```js
 var app = require('express')();
 
-var expressMongoDb = require('mongo-express-req');
-app.use(expressMongoDb('mongodb://localhost/test'));
+var expressMongoDb = require('mongodb-express-req');
+app.use(expressMongoDb('mongodb://localhost/db_name'));
 
 app.get('/', function (req, res, next) {
-	req.db // => Db object
+  req.db // => Db object
+  req.db.collection('collection_name').insertOne({ email, password })
 });
 ```
 
@@ -46,7 +45,10 @@ Default: `db`
 
 Property on `request` object in which db connection will be stored.
 
+## Credentials
+
+Fork of [titanscouting/mongo-express-req](https://github.com/titanscouting/mongo-express-req)
 
 ## License
 
-MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop) and [Dev Singh](http://github.com/devksingh4)
+MIT © [Roman Shmigelsky](http://github.com/roman-sh)
