@@ -45,7 +45,10 @@ Default: `db`
 
 Property on `request` object in which db connection will be stored.
 
+## Credentials
+
+Fork of [titanscouting/mongo-express-req](https://github.com/titanscouting/mongo-express-req)
 
 ## License
 
-MIT © [Vsevolod Strukchinsky](http://github.com/floatdrop), [Dev Singh](http://github.com/devksingh4), [Roman Shmigelsky](http://github.com/roman-sh)
+MIT © [Roman Shmigelsky](http://github.com/roman-sh)
