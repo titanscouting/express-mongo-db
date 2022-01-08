@@ -6,7 +6,7 @@
   "repository": "titanscouting/mongo-express-req",
   "author": {
     "name": "Dev Singh",
-    "email": "dsingh@imsa.edu",
+    "email": "dsingh@imsa.edu"
   },
   "engines": {
     "node": ">=12.9"
