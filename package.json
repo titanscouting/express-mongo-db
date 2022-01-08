@@ -1,16 +1,15 @@
 {
   "name": "mongo-express-req",
-  "version": "3.0.2",
+  "version": "4.3.0",
   "description": "Get db connection in request",
   "license": "MIT",
   "repository": "titanscouting/mongo-express-req",
   "author": {
     "name": "Dev Singh",
     "email": "dsingh@imsa.edu",
-    "url": "https://devksingh.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=12.9"
   },
   "scripts": {
     "test": "eslint . && tap test.js"
@@ -24,7 +23,7 @@
     "express"
   ],
   "dependencies": {
-    "mongodb": "^3.6.5"
+    "mongodb": "^4.3.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
